@@ -1,0 +1,35 @@
+
+document.getElementById("filter-city").addEventListener("input", function () {
+    let filterText = this.value.toLowerCase();
+    let rows = document.querySelectorAll("#city-table tr");
+
+    rows.forEach(row => {
+        let cityCell = row.cells[1].textContent.toLowerCase();
+        if (cityCell.includes(filterText)) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    });
+});
+
+document.getElementById("search-city").addEventListener("input", function () {
+    let filterText = this.value.toLowerCase();
+    let options = document.querySelectorAll("#city-select option");
+
+    options.forEach(option => {
+        let cityName = option.textContent.toLowerCase();
+        if (cityName.includes(filterText)) {
+            option.style.display = "";
+        } else {
+            option.style.display = "none";
+        }
+    });
+});
+
+document.getElementById("city-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    let selectedCity = document.getElementById("city-select").value;
+    alert("Vybrali jste město: " + selectedCity);
+    console.log("Vybrané město: ", selectedCity);
+});
