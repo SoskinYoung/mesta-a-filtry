@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukázka filtrování dat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ukázka filtrování dat</h1>
+        <nav>
+            <ul>
+                <li><a href="#tabulka">Tabulka</a></li>
+                <li><a href="#formular">Formulář</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="tabulka">
+        <h2>Tabulka s městy a počty obyvatel</h2>
+        <input type="text" id="filter-city" placeholder="Filtrovat podle města">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Město</th>
+                    <th>Počet obyvatel</th>
+                </tr>
+            </thead>
+            <tbody id="city-table">
+                <tr>
+                    <td>1</td>
+                    <td>Hamburk</td>
+                    <td>1 800 000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Barcelona</td>
+                    <td>1 620 000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Řím</td>
+                    <td>2 860 000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Lisabon</td>
+                    <td>505 000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Edinburgh</td>
+                    <td>540 000</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Amsterdam</td>
+                    <td>875 000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="formular">
+        <h2>Filtrujte město ve formuláři</h2>
+        <label for="search-city">Filtrovat města:</label>
+        <input type="text" id="search-city" placeholder="Filtrujte města">
+        <form id="city-form">
+            <label for="city-select">Vyberte město:</label>
+            <select id="city-select">
+                <option value="Hamburk">Hamburk</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Řím">Řím</option>
+                <option value="Lisabon">Lisabon</option>
+                <option value="Edinburgh">Edinburgh</option>
+                <option value="Amsterdam">Amsterdam</option>
+            </select>
+            <button type="submit">Odeslat</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
